@@ -7,8 +7,8 @@ import java.net.URI;
 import java.net.URL;
 
 @UtilityClass
-public class DriverUtils {
-    public static URL driverUrl() {
+public class ServiceUtils {
+    public static URL getUrl() {
         URL url;
         try {
             url = URI.create("http://127.0.0.1:4723/").toURL();

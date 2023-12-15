@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.Objects;
 
 public class BaseIOSTest extends BaseMobileTest {
+    public static final Duration WDA_LAUNCH_TIMEOUT = Duration.ofMinutes(4);
     public static final String DEVICE_NAME = Objects.nonNull(System.getenv("IOS_DEVICE_NAME"))
             ? System.getenv("IOS_DEVICE_NAME")
             : "iPhone 15";

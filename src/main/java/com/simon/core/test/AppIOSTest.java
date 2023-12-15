@@ -5,6 +5,7 @@ import com.simon.utils.ServiceUtils;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import org.openqa.selenium.SessionNotCreatedException;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
@@ -27,5 +28,9 @@ public class AppIOSTest extends BaseIOSTest {
             options.useNewWDA();
             iosDriver = new IOSDriver(ServiceUtils.getUrl(), options);
         }
+    }
+
+    protected WebDriverWait getWait(Duration duration) {
+        return new WebDriverWait(iosDriver, duration);
     }
 }

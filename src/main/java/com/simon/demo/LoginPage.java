@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
-import java.util.function.Consumer;
 
 public class LoginPage implements IMyDriverWithLambda {
 

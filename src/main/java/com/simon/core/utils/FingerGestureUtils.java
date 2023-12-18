@@ -114,14 +114,14 @@ public class FingerGestureUtils<D extends AppiumDriver> {
     private Point getSwipeEndPosition(final Direction direction, final WebElement element, final int distance) {
         verifyDistance(distance);
         final var start = getSwipeStartPosition(element);
-        final var x = start.getX() + (direction.getX() * direction.getX() * distance / 100);
-        final var y = start.getY() + (direction.getY() * direction.getY() * distance / 100);
+        final var x = start.getX() + direction.getX() * distance;
+        final var y = start.getY() + direction.getY() * distance;
         return getCorrectedCoordinates(element, new Point(x, y));
     }
 
     private void verifyDistance(int distance) {
-        if (distance <= 0 || distance >= 100) {
-            throw new IllegalArgumentException("Distance must be between 0 and 100 exclusive...");
+        if (distance <= 0 || distance >= 1000) {
+            throw new IllegalArgumentException("Distance must be between 0 and 1000 exclusive...");
         }
     }
 

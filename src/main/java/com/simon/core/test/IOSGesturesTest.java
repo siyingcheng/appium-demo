@@ -9,16 +9,15 @@ import org.testng.annotations.BeforeClass;
 
 import java.time.Duration;
 
-public class AppIOSTest extends BaseIOSTest {
-    public static final Duration WDA_LAUNCH_TIMEOUT = Duration.ofMinutes(4);
+public class IOSGesturesTest extends BaseIOSTest {
 
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public void beforeClass() {
         var options = new XCUITestOptions()
                 .setPlatformVersion(PLATFORM_VERSION)
                 .setDeviceName(DEVICE_NAME)
                 .setCommandTimeouts(Duration.ofMinutes(4))
-                .setApp(AppUtils.getIosApp())
+                .setApp(AppUtils.getIosNativeDemoApp())
                 // WDA -> Web Driver Agent
                 .setWdaLaunchTimeout(WDA_LAUNCH_TIMEOUT);
         try {

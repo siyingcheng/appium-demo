@@ -3,6 +3,7 @@ package com.simon.core.test;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 
 import java.time.Duration;
@@ -42,5 +43,9 @@ public class BaseIOSTest extends BaseMobileTest {
         if (Objects.nonNull(service) && service.isRunning()) {
             service.stop();
         }
+    }
+
+    public WebDriverWait getWait(Duration duration) {
+        return new WebDriverWait(iosDriver, duration);
     }
 }

@@ -1,6 +1,5 @@
-package com.simon.core.test;
+package com.simon.testcases.ios;
 
-import com.simon.testcases.ios.BaseIOSWebViewTest;
 import io.appium.java_client.NoSuchContextException;
 import org.testng.annotations.Test;
 

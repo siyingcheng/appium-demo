@@ -1,5 +1,6 @@
-package com.simon.core.test;
+package com.simon.testcases.ios;
 
+import com.simon.core.test.AppIOSTest;
 import io.appium.java_client.AppiumBy;
 import org.testng.annotations.Test;
 
